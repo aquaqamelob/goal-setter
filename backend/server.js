@@ -20,6 +20,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/api/goals", goalRoutes);
 app.use("/api/users", userRoutes);
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+  app.get("*", (req, res) =>
+    res.sendFile(
+      path.resolve(__dirname, "../", "frontend", "dist", "index.html")
+    )
+  );
+} else {
+  app.get("/", (req, res) => res.send("Please set to production"));
+}
+
 app.use(errorHandler);
 app.listen(port, () => {
   console.log("server is listening at http://localhost:" + port);
