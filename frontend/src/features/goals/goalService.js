@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api/goals/";
+const API_URL = "https://norbert-goal-setter.herokuapp.com/";
 
 // Create new goal
 const createGoal = async (goalData, token) => {
