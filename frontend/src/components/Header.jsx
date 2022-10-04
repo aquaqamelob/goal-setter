@@ -32,11 +32,11 @@ const Header = () => {
         className="max-w-[85rem] w-full mx-auto px-4 flex justify-between"
         aria-label="Global"
       >
-        <Link to="/">
+        
           <span className="flex-none text-xl font-semibold text-white">
             GoalSetter
           </span>
-        </Link>
+       
         <div className="flex gap-5 items-center mt-0">
           {user ? (
             <span
