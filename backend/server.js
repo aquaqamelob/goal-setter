@@ -4,14 +4,17 @@ import goalRoutes from "./routes/goalRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import { errorHandler } from "./middleware/errorMiddleware.js";
 import connectDB from "./config/db.js";
-
+import path from "path";
 import cors from "cors";
+import { fileURLToPath } from "url";
 
 config();
 connectDB();
 
 const port = process.env.PORT || 3000;
 const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.use(cors());
 app.use(express.json());
