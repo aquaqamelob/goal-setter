@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://norbert-goal-setter.herokuapp.com/",
+        target: "https://norbert-goal-setter-production.up.railway.app/",
         changeOrigin: true,
         secure: false,
         ws: true,
