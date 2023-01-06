@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://norbert-goal-setter-production.up.railway.app/",
+        target: "https://localhost:3000/",
         changeOrigin: true,
         secure: false,
         ws: true,
