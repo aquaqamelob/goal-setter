@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://norbert-goal-setter.herokuapp.com/api/users/";
+const API_URL = "https://norbert-goal-setter-production.up.railway.app/";
 
 // Register user
 const register = async (userData) => {
